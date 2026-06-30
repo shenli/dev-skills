@@ -9,6 +9,7 @@ skill keeps its own workflow details in its directory.
 
 | Skill | Purpose |
 |---|---|
+| [`infra-product-docs`](infra-product-docs/SKILL.md) | Create, audit, reorganize, and maintain documentation for infrastructure and developer products. |
 | [`pr-doc-sync`](pr-doc-sync/SKILL.md) | Check whether a pull request should update project docs before it is considered complete. |
 
 ## Install
@@ -16,7 +17,7 @@ skill keeps its own workflow details in its directory.
 Install a single skill by name:
 
 ```bash
-npx skills add shenli/dev-skills@pr-doc-sync -g
+npx skills add shenli/dev-skills@<skill-name> -g
 ```
 
 Skill-specific setup lives in each skill's `SKILL.md`.
@@ -38,7 +39,7 @@ npx skills check
 To force-refresh this skill from GitHub, run the install command again:
 
 ```bash
-npx skills add shenli/dev-skills@pr-doc-sync -g
+npx skills add shenli/dev-skills@<skill-name> -g
 ```
 
 ## Repository Layout

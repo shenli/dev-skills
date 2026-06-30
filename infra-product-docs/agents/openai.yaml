@@ -1,0 +1,7 @@
+interface:
+  display_name: "Infra Product Docs"
+  short_description: "Structure docs for infrastructure products"
+  default_prompt: "Use $infra-product-docs to audit and improve this repo's product, design, operations, and reference docs."
+
+policy:
+  allow_implicit_invocation: true
