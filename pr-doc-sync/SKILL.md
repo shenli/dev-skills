@@ -9,6 +9,12 @@ Before calling a PR complete, check whether the change affects user-visible
 behavior, architecture, APIs, operations, deployment, feature progress, known
 limitations, or implementation status.
 
+## Install
+
+```bash
+npx skills add shenli/dev-skills@pr-doc-sync -g
+```
+
 ## Find Repo Doc Targets
 
 Read repo guidance first:
@@ -85,3 +91,24 @@ Docs:
 
 If behavior changed and no configured docs were updated, stop and update the
 docs before calling the PR complete.
+
+## Suggested Repo Configuration
+
+Add repo-specific targets to `AGENTS.md` or equivalent agent instructions:
+
+```markdown
+## PR Documentation Sync
+
+When finishing, pushing, or opening a pull request, check whether the change
+updates product behavior, architecture, operations, API/SDK surface,
+implementation status, support boundaries, or known limitations.
+
+If it does, update the relevant docs before calling the PR complete:
+
+- Design and implementation status: `docs/architecture/current-design.md`
+- Product progress and gaps: `docs/product-roadmap.md`
+- API and SDK behavior: `docs/reference/api-sdk.md`
+- Operations and deployment behavior: `docs/operations/`
+
+If docs are not needed, state why in the PR summary or final response.
+```

@@ -1,0 +1,7 @@
+interface:
+  display_name: "PR Doc Sync"
+  short_description: "Keep project docs aligned with PR changes"
+  default_prompt: "Use $pr-doc-sync to check whether this PR needs documentation updates before it is complete."
+
+policy:
+  allow_implicit_invocation: true

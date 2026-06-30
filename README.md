@@ -1,39 +1,39 @@
 # dev-skills
 
-Reusable AI coding-agent skills for developer workflows.
+Reusable AI coding-agent skills for software development workflows.
+
+This repo is a small catalog of skills that are useful across projects. Each
+skill keeps its own workflow details in its directory.
 
 ## Skills
 
-- [`pr-doc-sync`](pr-doc-sync/SKILL.md) - checks whether a pull request should
-  update design, roadmap, architecture, API, operations, release, or
-  implementation-status docs before the PR is considered complete.
+| Skill | Purpose |
+|---|---|
+| [`pr-doc-sync`](pr-doc-sync/SKILL.md) | Check whether a pull request should update project docs before it is considered complete. |
 
 ## Install
+
+Install a single skill by name:
 
 ```bash
 npx skills add shenli/dev-skills@pr-doc-sync -g
 ```
 
-## Repo Configuration
+Skill-specific setup lives in each skill's `SKILL.md`.
 
-`pr-doc-sync` is intentionally general. Each repository should define its own
-documentation targets in `AGENTS.md` or equivalent repo instructions.
+## Repository Layout
 
-Example:
-
-```markdown
-## PR Documentation Sync
-
-When finishing, pushing, or opening a pull request, check whether the change
-updates product behavior, architecture, operations, API/SDK surface,
-implementation status, support boundaries, or known limitations.
-
-If it does, update the relevant docs before calling the PR complete:
-
-- Design and implementation status: `docs/architecture/current-design.md`
-- Product progress and gaps: `docs/product-roadmap.md`
-- API and SDK behavior: `docs/reference/api-sdk.md`
-- Operations and deployment behavior: `docs/operations/`
-
-If docs are not needed, state why in the PR summary or final response.
+```text
+<skill-name>/
+  SKILL.md
+  agents/openai.yaml   # optional UI metadata
 ```
+
+## Adding Skills
+
+Keep new skills focused and portable:
+
+- put reusable workflow logic in the skill
+- put project-specific policy in the consuming repo's agent instructions
+- avoid adding repo-specific paths or product names to a general skill
+- keep `SKILL.md` concise enough to load into an agent context
