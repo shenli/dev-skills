@@ -105,10 +105,10 @@ implementation status, support boundaries, or known limitations.
 
 If it does, update the relevant docs before calling the PR complete:
 
-- Design and implementation status: `docs/architecture/current-design.md`
-- Product progress and gaps: `docs/product-roadmap.md`
-- API and SDK behavior: `docs/reference/api-sdk.md`
-- Operations and deployment behavior: `docs/operations/`
+- Design and implementation status: `<design-doc-path>`
+- Product progress and gaps: `<roadmap-doc-path>`
+- API, SDK, CLI, or protocol behavior: `<reference-doc-path>`
+- Operations and deployment behavior: `<operations-doc-path-or-dir>`
 
 If docs are not needed, state why in the PR summary or final response.
 ```
