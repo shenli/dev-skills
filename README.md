@@ -21,6 +21,26 @@ npx skills add shenli/dev-skills@pr-doc-sync -g
 
 Skill-specific setup lives in each skill's `SKILL.md`.
 
+## Update
+
+Update installed skills:
+
+```bash
+npx skills update
+```
+
+Check what would change before updating:
+
+```bash
+npx skills check
+```
+
+To force-refresh this skill from GitHub, run the install command again:
+
+```bash
+npx skills add shenli/dev-skills@pr-doc-sync -g
+```
+
 ## Repository Layout
 
 ```text
